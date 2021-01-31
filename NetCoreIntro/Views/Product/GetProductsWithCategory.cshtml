@@ -1,0 +1,31 @@
+﻿@model List<NetCoreIntro.Models.Product>
+@{
+    ViewData["Title"] = "GetProductsWithCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table-striped">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>CategoryID</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.ID</td>
+                <td>@p.ProductName</td>
+                <td>@p.UnitPrice</td>
+                <td>@p.CategoryId</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
